@@ -10,4 +10,4 @@
 - phoneView-0.5-beta
 
 ###Demo
-[Demo](https://keyzf.github.io/phoneView/ "Demo"){:target="_blank"}
+[Demo](https://keyzf.github.io/phoneView/ "Demo")
