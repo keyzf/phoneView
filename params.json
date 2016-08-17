@@ -1,0 +1,6 @@
+{
+  "name": "Phoneview",
+  "tagline": "一个用来格式化手机跟大陆固定电话的小工具，格式成133-1234-1234 、010-1234561",
+  "body": "﻿# phoneView\r\n\r\n#### 简单说明\r\n\r\n- 用于格式化手机电话号码的显示;\r\n- 依赖Jquery;\r\n\r\n\r\n#### 版本\r\n- phoneView-0.5-beta\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
