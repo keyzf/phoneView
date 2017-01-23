@@ -22,19 +22,22 @@
                         }
                     }else if (/^0[1-2]\d+$/.test(numVal)) {
                         if(numVal.length > 3 && numVal.length < 12){
-                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(4, numVal.length);
+                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, numVal.length);
                         }else{
                             showVal = numVal;
                         }
                     }else if (/^1[3-8]\d+$/.test(numVal)) {
-                        if(numVal.length > 4 && numVal.length < 8){//132 3256 2
-                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(4, numVal.length);
-                        }else if(numVal.length > 4 && numVal.length < 12){
+                        if(numVal.length > 3 && numVal.length < 8){//132 3256 2
+                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, numVal.length);
+                        }else if(numVal.length > 7 && numVal.length < 12){
                             showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, 7) + '-' + numVal.substring(7, numVal.length);
                         }else{
                             showVal = numVal;
                         }
+                    }else{
+                        showVal = numVal;
                     }
+
                     target.val(showVal).attr('data-num', numVal);
                 }
 
