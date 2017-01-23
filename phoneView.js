@@ -7,7 +7,8 @@
     $.fn.phoneView = function () {
         return this.each(function () {
 
-            $(this).off('keyup.phoneView change.phoneView input.phoneView').on('keyup.phoneView change.phoneView input.phoneView', function (e) {
+            $(this).off('keyup.pv change.pv input.pv').
+                on('keyup.pv change.pv input.pv', function (e) {
                 var target = $(this),
                     inputVal = target.val(),
                     numVal = inputVal.replace(/-/g, ''),
@@ -16,21 +17,25 @@
                 if (/^[\d]*$/.test(numVal)) {
                     if(/^0[3-9]\d+$/.test(numVal)){
                         if(numVal.length > 4 && numVal.length < 13){
-                            showVal = numVal.substring(0, 4) + "-" + numVal.substring(4, numVal.length);
+                            showVal = numVal.substring(0, 4) + "-"
+                                      + numVal.substring(4, numVal.length);
                         }else{
                             showVal = numVal;
                         }
                     }else if (/^0[1-2]\d+$/.test(numVal)) {
                         if(numVal.length > 3 && numVal.length < 12){
-                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, numVal.length);
+                            showVal = numVal.substring(0, 3) + "-"
+                                      + numVal.substring(3, numVal.length);
                         }else{
                             showVal = numVal;
                         }
                     }else if (/^1[3-8]\d+$/.test(numVal)) {
                         if(numVal.length > 3 && numVal.length < 8){//132 3256 2
-                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, numVal.length);
+                            showVal = numVal.substring(0, 3) + "-"
+                                      + numVal.substring(3, numVal.length);
                         }else if(numVal.length > 7 && numVal.length < 12){
-                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, 7) + '-' + numVal.substring(7, numVal.length);
+                            showVal = numVal.substring(0, 3) + "-" + numVal.substring(3, 7)
+                                      + '-' + numVal.substring(7, numVal.length);
                         }else{
                             showVal = numVal;
                         }
