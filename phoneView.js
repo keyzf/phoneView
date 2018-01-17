@@ -29,7 +29,7 @@
                         }else{
                             showVal = numVal;
                         }
-                    }else if (/^1[3-8]\d+$/.test(numVal)) {
+                    }else if (/^1[3-9]\d+$/.test(numVal)) {
                         if(numVal.length > 3 && numVal.length < 8){//132 3256 2
                             showVal = numVal.substring(0, 3) + "-"
                                       + numVal.substring(3, numVal.length);
